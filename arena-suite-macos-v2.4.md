@@ -217,12 +217,12 @@ You may use publicly observable route and bundle evidence, Arena's help center, 
 
 ## Required deliverable
 
-Produce one complete, standalone HTML architecture report suitable for direct use as `arena-model-archive-plan.html`.
+Produce one complete HTML architecture report suitable for direct use as `arena-model-archive-plan.html`.
 
 **Materialize the deliverable in whatever execution environment you have been given:**
 
 - **If you have a coding workspace, filesystem tools, or a live application preview:** create the finished artifact in that workspace and ensure the rendered preview shows the finished report. Replace or modify any starter/template project as necessary. **Do not leave the deliverable only in your final chat response.** The downloadable/generated project must contain the actual finished report. Before finishing, verify that the file exists and that the preview or local render is showing the completed report rather than a starter template, placeholder, or scaffold.
-- **If you are running in a text-only environment without the ability to create files:** return only the complete standalone HTML document, beginning with `<!doctype html>` and ending with `</html>`, with no Markdown fence or surrounding prose.
+- **If you are running in a text-only environment without the ability to create files:** return only the complete HTML document, beginning with `<!doctype html>` and ending with `</html>`, with no Markdown fence or surrounding prose.
 
 The execution environment does not determine the report's design. Decide for yourself how the architecture decision should be presented.
 
@@ -237,10 +237,8 @@ Visual quality matters, but architecture and reasoning matter more. Presentation
 The document must:
 
 - be a single HTML file;
-- use **Departure Mono from [departuremono.com](https://departuremono.com/)** as its typeface. Treat the typography as a fixed requirement but make all other visual decisions yourself; do not infer a broader aesthetic or layout style from the font choice;
-- allow runtime network access only when needed to load Departure Mono directly from `departuremono.com`. Do not use Google Fonts, a CDN, mirror, or another font source. If the execution environment cannot verify a direct font asset URL from `departuremono.com`, do not invent one: author the document to prefer `Departure Mono` with an appropriate monospace fallback and clearly preserve the intended font choice;
-- make no other network requests at runtime;
-- use no other remote font, CDN, tracker, analytics, external script, iframe, or external image;
+- use **Departure Mono from [departuremono.com](https://departuremono.com/)** as its primary typeface. Treat the typography as a fixed requirement but make all other visual decisions yourself; do not infer a broader aesthetic or layout style from the font choice. Use an official loading method or asset from `departuremono.com` when available, and do not invent an unverified asset URL;
+- external runtime dependencies are allowed. You may use remote stylesheets, scripts, libraries, images, APIs, CDNs, or other network-loaded resources when they materially improve the report. There is no requirement for the report to work offline or to be self-contained beyond being delivered as one HTML entry file. Choose dependencies yourself and avoid adding them merely for decoration;
 - escape source-derived or otherwise untrusted text where relevant;
 - be usable on a normal laptop display and narrower window sizes;
 - remain reasonably usable when printed or saved as PDF;
@@ -249,7 +247,7 @@ The document must:
 - contain enough navigation or structural orientation that a long technical report remains usable;
 - clearly distinguish verified facts, strong inferences, hypotheses, unknowns, and recommendations wherever those distinctions matter.
 
-Apart from the permitted Departure Mono font loading described above, the artifact must be self-contained. Choose whatever internal HTML/CSS/JavaScript structure best serves the report, subject to the runtime-network restrictions above. JavaScript is permitted when it materially improves the document, but should not exist merely to demonstrate interactivity.
+Choose whatever internal or external HTML/CSS/JavaScript structure best serves the report. JavaScript is permitted when it materially improves the document, but should not exist merely to demonstrate interactivity. The choice to use or avoid external runtime dependencies is part of your design judgment.
 
 Use whatever combination of prose, tables, diagrams, decision matrices, schemas, state machines, code-like notation, timelines, callouts, or other representations best explains the design. You are not required to use any particular one of them.
 
@@ -343,4 +341,4 @@ Before returning the document, silently check that the result:
 - includes appropriate sources without fabricated references;
 - remains complete even if some Arena-specific questions must be left explicitly unverified;
 - is visually deliberate and professionally produced without allowing presentation work to displace the technical substance;
-- is complete single-file HTML whose only permitted runtime network dependency is Departure Mono loaded directly from `departuremono.com`.
+- is complete single-file HTML, uses Departure Mono from `departuremono.com`, and makes deliberate rather than accidental choices about any external runtime dependencies.
