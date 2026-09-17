@@ -1,5 +1,7 @@
 # One-Shot Architecture Planning Prompt: Private Arena Conversation Archive for macOS
 
+**Prompt version: 3.0**
+
 ## 1. Assignment and priorities
 
 Act as a principal macOS application architect with expertise in browser platforms, privacy, data systems, and applied-ML research methodology. In **one run**, produce a complete architecture and implementation plan for the private app described below. The plan must be specific enough for AI coding agents to begin implementation with little human oversight.
